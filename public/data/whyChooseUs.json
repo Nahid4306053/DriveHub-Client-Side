@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Wide Range of Cars",
+    "icon": "fas fa-car",
+    "description": "Explore a diverse fleet: Choose from a wide selection of vehicles, from compact cars to spacious SUVs, ensuring there's a perfect car for every need."
+  },
+  {
+    "title": "Competitive Pricing",
+    "icon": "fas fa-dollar-sign",
+    "description": "Affordable rates: Enjoy competitive and transparent pricing with no hidden fees. We strive to offer the best value for your money."
+  },
+  {
+    "title": "Easy Booking Process",
+    "icon": "fas fa-book",
+    "description": "Simple and secure: Our user-friendly platform makes booking a breeze. A few clicks are all it takes to secure your dream car for the journey ahead."
+  }
+]
