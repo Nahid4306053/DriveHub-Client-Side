@@ -1,0 +1,343 @@
+ [
+    {
+      "id": 1,
+      "name": "Toyota",
+      "models": [
+        {
+          "id": 101,
+          "name": "Camry",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 102,
+          "name": "Corolla",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 103,
+          "name": "RAV4",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 104,
+          "name": "Highlander",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Honda",
+      "models": [
+        {
+          "id": 201,
+          "name": "Accord",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 202,
+          "name": "Civic",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 203,
+          "name": "CR-V",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 204,
+          "name": "Pilot",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ford",
+      "models": [
+        {
+          "id": 301,
+          "name": "Fusion",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 302,
+          "name": "Focus",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 303,
+          "name": "Escape",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 304,
+          "name": "Explorer",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Chevrolet",
+      "models": [
+        {
+          "id": 401,
+          "name": "Malibu",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 402,
+          "name": "Cruze",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 403,
+          "name": "Equinox",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 404,
+          "name": "Traverse",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Nissan",
+      "models": [
+        {
+          "id": 501,
+          "name": "Altima",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 502,
+          "name": "Sentra",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 503,
+          "name": "Rogue",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 504,
+          "name": "Pathfinder",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "BMW",
+      "models": [
+        {
+          "id": 601,
+          "name": "3 Series",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 602,
+          "name": "5 Series",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 603,
+          "name": "X3",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 604,
+          "name": "X5",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Mercedes-Benz",
+      "models": [
+        {
+          "id": 701,
+          "name": "C-Class",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 702,
+          "name": "E-Class",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 703,
+          "name": "GLC",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 704,
+          "name": "GLE",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Audi",
+      "models": [
+        {
+          "id": 801,
+          "name": "A4",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 802,
+          "name": "A6",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 803,
+          "name": "Q5",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 804,
+          "name": "Q7",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Hyundai",
+      "models": [
+        {
+          "id": 901,
+          "name": "Sonata",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 902,
+          "name": "Elantra",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 903,
+          "name": "Tucson",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 904,
+          "name": "Santa Fe",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Kia",
+      "models": [
+        {
+          "id": 1001,
+          "name": "Optima",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 1002,
+          "name": "Forte",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 1003,
+          "name": "Sportage",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        },
+        {
+          "id": 1004,
+          "name": "Sorento",
+          "modelYears": "2022-2023",
+          "fuelType": "Gasoline",
+          "transmissionType": "Automatic"
+        }
+      ]
+    }
+  ]
+

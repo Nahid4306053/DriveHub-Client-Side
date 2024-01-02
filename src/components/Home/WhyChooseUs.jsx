@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
                     },
                     {
                       "title": "Competitive Pricing",
-                      "icon": "fas fa-dollar-sign",
+                      "icon": "fa-solid fa-money-check",
                       "description": "Affordable rates: Enjoy competitive and transparent pricing with no hidden fees. We strive to offer the best value for your money."
                     },
                     {

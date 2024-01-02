@@ -12,11 +12,14 @@ import AuthHandler from "./AuthHandler";
 import PrivateRouter from "./PrivateRouter";
 import ContactUs from "../pages/ContactUs";
 import AboutUs from "../pages/AboutUs";
-import MyTask from "../pages/Dashboard/MyTask";
+import AddNewCar from "../pages/Dashboard/AddNewCar";
+import ManageCars from "../pages/Dashboard/ManageCars";
+import CarDetails from "../pages/CarDetails";
+import MyBookings from "../pages/Dashboard/MyBookings";
+import UpcomingBook from "../pages/Dashboard/UpcomingBookings";
+import ManageBookings from "../pages/Dashboard/ManageBooking";
+import MangeUser from "../pages/Dashboard/MangeUser";
 
-import OfferAnnouncements from "../pages/Dashboard/OfferAnnouncements";
-import Setting from "../pages/Dashboard/Setting";
-import TodayTask from "../pages/Dashboard/TodayTask";
 const CreateDRouter = createBrowserRouter([
   {
     path: "/",
@@ -37,12 +40,17 @@ const CreateDRouter = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {   
+      {
         path: "/contact",
         element: <ContactUs />,
-      },{
+      },
+      {
         path: "/about",
         element: <AboutUs />,
+      }
+      ,
+      { path: "/car-details/:id",
+       element: <CarDetails></CarDetails> 
       },
     ],
   },
@@ -80,10 +88,12 @@ const CreateDRouter = createBrowserRouter([
     errorElement: <Notfound></Notfound>,
     children: [
       { path: "profile", element: <MyProfile></MyProfile> },
-      { path: "my-task", element: <MyTask></MyTask> },
-      { path: "todays-task", element: <TodayTask></TodayTask> },
-      { path: "announcements", element: <OfferAnnouncements></OfferAnnouncements> },
-      { path: "settings", element: <Setting></Setting> },
+      { path: "add-car", element: <AddNewCar></AddNewCar> },
+      { path: "manage-cars", element: <ManageCars></ManageCars> },
+      { path: "my-bookings", element: <MyBookings></MyBookings> },
+      { path: "upcoming-bookings", element: <UpcomingBook></UpcomingBook> },
+      { path: "manage-bookings", element: <ManageBookings></ManageBookings> },
+      { path: "manage-users", element: <MangeUser></MangeUser> },
     ],
   },
 ]);

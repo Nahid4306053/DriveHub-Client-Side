@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
 import React, { useEffect } from 'react'

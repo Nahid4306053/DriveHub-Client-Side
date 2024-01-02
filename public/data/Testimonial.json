@@ -1,30 +1,45 @@
 [
   {
-    "author": "Jane Smith",
+    "author": {
+      "name": "Jane Smith",
+      "avatar": "https://i.ibb.co/hVCmVXM/teacher-m-3.png"
+    },
     "position": "Business Traveler",
     "quote": "DriveHub's efficient booking system and high-quality fleet have been a game-changer for my business trips. Their commitment to customer satisfaction is evident, making them my go-to choice for car rentals.",
     "rating": 5
   },
   {
-    "author": "Alex Johnson",
+    "author": {
+      "name": "Alex Johnson",
+      "avatar": "https://i.ibb.co/drj848b/teacher-m-5.png"
+    },
     "position": "Family Vacationer",
     "quote": "Our family road trip was a breeze thanks to DriveHub. The spacious and comfortable car, combined with their friendly service, made our journey memorable. DriveHub is now an integral part of our vacation plans.",
     "rating": 4.5
   },
   {
-    "author": "Sam Patel",
+    "author": {
+      "name": "Sam Patel",
+      "avatar": "https://i.ibb.co/yyRyV0p/teacher-m-7.jpg"
+    },
     "position": "Adventure Seeker",
     "quote": "As an avid traveler, I appreciate DriveHub's commitment to innovation and sustainability. Renting a car for my outdoor adventures has never been this convenient and eco-friendly. DriveHub is my adventure companion.",
     "rating": 4.8
   },
   {
-    "author": "Emily Lewis",
+    "author": {
+      "name": "Emily Lewis",
+      "avatar": "https://i.ibb.co/KqNc9q0/teacher-f-6.png"
+    },
     "position": "Event Organizer",
     "quote": "DriveHub's reliable service and flexibility have been invaluable for organizing events. From logistics to accommodating last-minute changes, their team ensures a smooth and stress-free experience. Highly recommended!",
     "rating": 4.7
   },
   {
-    "author": "Chris Turner",
+    "author": {
+      "name": "Chris Turner",
+      "avatar": "https://i.ibb.co/341YgTm/teacher-f-10.jpg"
+    },
     "position": "Weekend Explorer",
     "quote": "DriveHub has elevated my weekend getaways. The diverse car options, straightforward booking process, and the exceptional condition of the vehicles have consistently exceeded my expectations. DriveHub is my go-to choice for spontaneous road trips.",
     "rating": 4.9

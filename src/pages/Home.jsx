@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 // import React from "react";
 // import { Link } from "react-router-dom";
@@ -5,7 +6,10 @@ import Pagetitle from "../Hooks/Pagetitle";
 import ScrollTop from "../Hooks/ScrollTop";
 import ConatactBanner from "../components/Home/ConatactBanner";
 import OurMision from "../components/Home/OurMision";
+import RentalCarsection from "../components/Home/RentalCarsection";
+import Testimonial from "../components/Home/Testimonial";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
+import Blogs from '../components/Home/Blogs'
 import PageBanner from "../components/shared/PageBanner";
 import SectionTitle from "../components/shared/SectionTitle";
 
@@ -47,8 +51,11 @@ export default function Home() {
       </div>
 
       </div>
+      <RentalCarsection></RentalCarsection>
       <ConatactBanner></ConatactBanner>
       <OurMision></OurMision>
+      <Testimonial></Testimonial>
+      <Blogs></Blogs>
     </>
   );
 }
