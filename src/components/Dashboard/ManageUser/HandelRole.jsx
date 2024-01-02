@@ -55,6 +55,13 @@ export default function HandelRole({ role, id }) {
           </button>
         </>
       )}
+     <button
+   
+      data-tip="Remove user"
+      className="btn text-red-600 tooltip btn-ghost btn-xs text-lg "
+    >
+      <i className="fa-solid fa-trash-can"></i>
+    </button>
     </td>
   );
 }

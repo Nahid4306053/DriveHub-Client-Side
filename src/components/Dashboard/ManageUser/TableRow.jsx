@@ -24,7 +24,9 @@ export default function TableRow({data}) {
         <p className="bg-white flex text-xs rounded-lg p-1">{data.email}</p>
         </div>
       </td>
-      <td><div className={`badge capitalize ${data.role === "admin" ?  "badge-secondary font-bold" :   data.role === "tour guider" ? "badge-accent text-white" : "" }`}>{data.role}</div></td>
+      <td><div className={`badge capitalize ${data.role === "admin" ?  "badge-secondary font-bold" :   data.role === "tour guider" ? "badge-accent text-white" : "" }`}>{data.role}</div>
+
+      </td>
        <HandelRole role={data.role} id={data._id}></HandelRole>
     </tr>
   );

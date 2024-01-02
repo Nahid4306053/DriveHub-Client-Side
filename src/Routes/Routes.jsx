@@ -19,6 +19,7 @@ import MyBookings from "../pages/Dashboard/MyBookings";
 import UpcomingBook from "../pages/Dashboard/UpcomingBookings";
 import ManageBookings from "../pages/Dashboard/ManageBooking";
 import MangeUser from "../pages/Dashboard/MangeUser";
+import ProfileSetting from "../pages/Dashboard/ProfileSetting";
 
 const CreateDRouter = createBrowserRouter([
   {
@@ -94,6 +95,7 @@ const CreateDRouter = createBrowserRouter([
       { path: "upcoming-bookings", element: <UpcomingBook></UpcomingBook> },
       { path: "manage-bookings", element: <ManageBookings></ManageBookings> },
       { path: "manage-users", element: <MangeUser></MangeUser> },
+      { path: "profile-settings", element: <ProfileSetting></ProfileSetting> },
     ],
   },
 ]);

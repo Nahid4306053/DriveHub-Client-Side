@@ -95,10 +95,37 @@ export default function AuthnicationContext({ children }) {
     await sendPasswordResetEmail(auth, email);
   };
 
+  const UpdateProfile = async  (username,photoURL)=>{
+    const dataforfirbase = {
+      displayName : username,
+    }   
+    if(photoURL){
+     dataforfirbase.photoURL = photoURL;
+    }
+    try{
+       await  updateProfile(auth.currentUser, dataforfirbase )
+  
+    const res2  =  await AxiosSecureV1.post(`${import.meta.env.VITE_API_URL_V1}/user`, {
+     uid: auth.currentUser.uid ,
+     email:  auth.currentUser.email, ...dataforfirbase
+   });
+   toast.success("Profile Updated succefully")
+   SetCurrentUser(res2.data);
+   
+   return true;
+    }
+    catch(err){
+      toast.success("Failed To update Profile")
+     console.log(err)
+     return false
+    }
+    
+   
+  }
   return (
     <AuthContext.Provider
       value={{
-        loading,
+        loading,UpdateProfile,
         forgetpassword,
         sendeVerificationmail,
         SignIn,

@@ -96,7 +96,7 @@ export default function Sidebar() {
           )}
 
           <div className=" xl:w-[90%]  w-[73%]  mx-auto ">
-            <NavLink className="px-5" to="/dashboard/my-task">
+            <NavLink className="px-5" to="/dashboard/profile-settings">
               <i className=" md:ml-1 ml-[2px]  fa-regular fa-head-side-gear mr-2 w-5"></i>
               <span className=" manu_item text-start lg:inline">
                 Profile Settings
