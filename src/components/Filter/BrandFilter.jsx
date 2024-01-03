@@ -4,19 +4,21 @@
 import { useEffect, useState } from "react";
 import useAxiosSecureV1 from "../../Hooks/useAxiosSecureV1";
 import { useLocation } from "react-router-dom";
+import useFilterData from "../../Hooks/useFilterData";
 
 export default function BrandFilter({setSearchParams,searchParams}) {
   const [brands, setBrands] = useState([]);
   const [selctedBrand, setSelectedBrand] = useState();
   const [selctedModel, setSelectedModel] = useState();
+
   const {search} = useLocation()
   const Axios = useAxiosSecureV1();
 
-  useEffect(() => {
+  useEffect(() => { 
     fetch("/data/CarDetails.json")
       .then((res) => res.json())
-      .then((data) => setBrands(data))
-      .catch((err) => console.log(err));
+      .then((data) => setBrands(data))  
+      .catch((err) => console.log(err)); 
   }, []);
 
   useEffect(()=>{

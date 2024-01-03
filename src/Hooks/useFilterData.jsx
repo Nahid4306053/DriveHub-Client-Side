@@ -4,7 +4,7 @@ import useAxiosPublicV1 from './useAxiosPublicV1';
 
 export default function useFilterData(page,limit,query) {
   const Tpage = page || 1 ;                  
-  const Tlimit = limit || 10 ;                  
+  const Tlimit = limit || 9 ;                  
   const axios = useAxiosPublicV1();
     const fetchFilterData = async () => {
      const res = await axios.get(`/car/filter${query}&page=${Tpage}&limit=${Tlimit}`);
