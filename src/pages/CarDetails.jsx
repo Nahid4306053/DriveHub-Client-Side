@@ -7,6 +7,7 @@ import SmallError from "../components/shared/SmallError";
 import Gallery from "../components/CarDetails/Gallery";
 import BookingCar from "../components/CarDetails/BookingCar";
 import Pagetitle from '../Hooks/Pagetitle'
+import CarReview from "../components/Dashboard/Rating/CarReview";
 export default function CarDetails() {
   const { id } = useParams();
   const { FullCarDetails, error, isError, isLoading, isSuccess } =
@@ -33,8 +34,8 @@ export default function CarDetails() {
             <Pagetitle> {FullCarDetails.data?.brand} {FullCarDetails.data?.model} || DriveHub </Pagetitle>
             {FullCarDetails.data?.brand} {FullCarDetails.data?.model}
           </h1>
-          <h3 className="md:text-3xl text-xl text-white italic">
-            Rent Your Dream Car Today - Seamless, Reliable, Unforgettable
+          <h3 className="md:text-2xl text-xl text-white italic">
+            Rent  {FullCarDetails.data?.brand} {FullCarDetails.data?.model} Car Today - to make your dreams comes true
           </h3>
         </div>
       </PageBanner>
@@ -57,7 +58,7 @@ export default function CarDetails() {
                <div className="header text-2xl text-white p-3 mt-10  bg-black font-semibold px-4 border-l-4 border-red-600">
                 Car Reviews
                </div>
-
+               <CarReview id={id}></CarReview>
                <div className="p-16 bg-red-300 text-white mt-10 space-y-4">
                     <h3 className="text-2xl font-bold">Do you want some modifications or schedule a test drive ?</h3>
                     <p>Integer tor bibendum estnu faucibus gravida aliquam nu lectus lacina lorem ipsum dolor sit amet consectetur adipisicing.</p>

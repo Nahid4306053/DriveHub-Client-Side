@@ -22,12 +22,17 @@ export default function HandelFilter({totaldata}) {
   }, [search]);
   const deletefilterkeyword = (key,index) =>{
      setSearchParams(old=>{
-      key === "brand"  ? ( old.delete(key),old.delete('model')) : old.delete(key);
+      key === "brand"  ? (old.delete("model"), old.delete(key)) : old.delete(key);
       return old;
      })
      const newkeywords = [...keywords];
      newkeywords.splice(index,1);
      setkeyWords(newkeywords);
+     if(key === "brand"){
+      const keysSort = ['brand','model']
+      const newkeywords = [...keywords].filter(ele=> !keysSort.includes(ele.key));
+      setkeyWords(newkeywords)
+     }
   }
   return (
     <div className="bg-base-300 p-5 flex items-center gap-10">

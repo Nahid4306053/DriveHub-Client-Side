@@ -19,7 +19,11 @@ export default function Cars() {
   const [searchParams,setSearchParams] = useSearchParams();      
   const [page,setpage] = useState(1);
   const {FilterData,error,isError,isLoading,isSuccess} = useFilterData(page,9,search || "?");
-
+   useEffect(()=>{
+     if(search){
+      setpage(1)
+     }
+   },[search])
   return (
                     
     <div>
@@ -33,7 +37,7 @@ export default function Cars() {
           <h1 className="md:text-5xl text-3xl text-white font-bold ita">
             Our Car Collections
           </h1>
-          <h3 className="md:text-3xl text-xl text-white italic">
+          <h3 className="md:text-2xl text-xl text-white italic">
             Rent Your Dream Car Today - Seamless, Reliable, Unforgettable
           </h3>
         </div>

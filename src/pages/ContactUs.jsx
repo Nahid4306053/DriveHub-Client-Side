@@ -4,6 +4,7 @@ import { useMood } from "../Context/TemplateMoodContext";
 import Pagetitle from "../Hooks/Pagetitle";
 import ScrollTop from "../Hooks/ScrollTop";
 import Input from "../components/Input";
+import PageBanner from "../components/shared/PageBanner";
 
 export default function ContactUs() {
   ScrollTop();
@@ -12,6 +13,22 @@ export default function ContactUs() {
     <>
       {" "}
       <Pagetitle>Contact us || DriveHub</Pagetitle>
+      <PageBanner
+        polygon={
+          "polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)"
+        }
+        bgimg={"https://i.ibb.co/XDVQxpQ/road-trip-convertible-750x400.jpg"}
+      >
+        <div className="text-center space-y-4 mt-20">
+          <h1 className="md:text-5xl text-3xl text-white font-bold ita">
+          Coutact Us 
+          </h1>
+     
+          <h3 className="md:text-xl text-xl text-white italic">
+            Rent Your Dream Car Today - Seamless, Reliable, Unforgettable
+          </h3>
+        </div>
+      </PageBanner>
       <div className="my-28  container gap-10 mx-auto flex flex-col md:flex-row">
         <div className="flex-1 conatct_info my-5">
           <div className="meadia">
@@ -166,7 +183,7 @@ export default function ContactUs() {
               </div>
 
               <div className="form-control mt-3 col-span-full ">
-                <button className="btn bg-red-600hover:bg-red-600text-white">
+                <button className="btn bg-red-600 hover:bg-red-600 text-white">
                   Send Message
                 </button>
               </div>

@@ -23,6 +23,7 @@ import ProfileSetting from "../pages/Dashboard/ProfileSetting";
 import Payment from "../pages/Dashboard/Payment";
 import MyPaymentHistory from "../pages/Dashboard/MyPaymentHistory";
 import Cars from "../pages/Cars";
+import RatingForm from "../components/Dashboard/Rating/RatingForm";
 
 const CreateDRouter = createBrowserRouter([
   {
@@ -105,6 +106,7 @@ const CreateDRouter = createBrowserRouter([
       { path: "profile-settings", element: <ProfileSetting></ProfileSetting> },
       { path: "payment-history", element: <MyPaymentHistory></MyPaymentHistory> },
       { path: "/dashboard/payment/:id", element: <Payment></Payment> },
+      { path: "/dashboard/review/:id", element: <RatingForm></RatingForm> },
     ],
   },
 ]);

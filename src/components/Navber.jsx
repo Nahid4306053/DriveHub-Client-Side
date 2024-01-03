@@ -17,13 +17,10 @@ export default function Navber() {
       <li>
         <NavLink to="/cars">Our Cars</NavLink>
       </li>
-      <li>
-        <NavLink to="/prinching">Prinching</NavLink>
-      </li>
+
       <li>
         <NavLink to="/about">About us</NavLink>
       </li>
-
       <li>
         <NavLink to="/contact">Contact Us</NavLink>
       </li>

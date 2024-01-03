@@ -29,6 +29,7 @@ export default function MyPaymentHistory() {
               <th>Rent Date</th>
               <th>Transection Id</th>
               <th>Total pay</th>
+              <th>Action</th>
             </tr>
           </thead>
           {isLoading ? (
@@ -65,6 +66,7 @@ export default function MyPaymentHistory() {
           )}
           {MyPaymentHistory?.data?.totalData > 0 && (
             <TableFoot
+            colSpan={6}
               page={page}
               setpage={setpage}
               totalData={MyPaymentHistory?.data?.totalData}

@@ -15,7 +15,7 @@ export default function CarDetailsCard({ data,customcss }) {
            <div>
            <h2 className=" font-semibold">${data.price}
            </h2>
-           <p>/Per Day</p>
+           <p className="text-lg">/Per Day</p>
            </div>         
          </div>           
         <h2 className="card-title">{ data.brand } { data.model }</h2>

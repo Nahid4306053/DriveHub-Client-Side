@@ -73,8 +73,8 @@ export default function BookingCar({ data }) {
   };
   return (
     <form onSubmit={handelInfo} className="mt-8 space-y-4">
-      <Input type={"date"} name="PickUpDate" label={"PickUp Date"} required ></Input>
-      <Input type={"date"} name="DropOffDate" label={"Drop off Date"} required ></Input>
+      <Input customcss={"rounded-none"} type={"date"} name="PickUpDate" label={"PickUp Date"} required ></Input>
+      <Input customcss={"rounded-none"} type={"date"} name="DropOffDate" label={"Drop off Date"} required ></Input>
       <div>
         <button disabled={(data.availabilityStatus  === "Available" ? false : true) || (CurrentUser && CurrentUser.role === "admin" ? true : false)} className="btn mt-3 bg-red-600 hover:bg-red-600 w-full text-white">{data.availabilityStatus  === "Available" ? "Rent Now" : data.availabilityStatus}  </button>
       </div>
