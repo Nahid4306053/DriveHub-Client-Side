@@ -20,6 +20,9 @@ import UpcomingBook from "../pages/Dashboard/UpcomingBookings";
 import ManageBookings from "../pages/Dashboard/ManageBooking";
 import MangeUser from "../pages/Dashboard/MangeUser";
 import ProfileSetting from "../pages/Dashboard/ProfileSetting";
+import Payment from "../pages/Dashboard/Payment";
+import MyPaymentHistory from "../pages/Dashboard/MyPaymentHistory";
+import Cars from "../pages/Cars";
 
 const CreateDRouter = createBrowserRouter([
   {
@@ -40,6 +43,10 @@ const CreateDRouter = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },      
+      {
+        path: "/cars",
+        element: <Cars />,
       },
       {
         path: "/contact",
@@ -96,6 +103,8 @@ const CreateDRouter = createBrowserRouter([
       { path: "manage-bookings", element: <ManageBookings></ManageBookings> },
       { path: "manage-users", element: <MangeUser></MangeUser> },
       { path: "profile-settings", element: <ProfileSetting></ProfileSetting> },
+      { path: "payment-history", element: <MyPaymentHistory></MyPaymentHistory> },
+      { path: "/dashboard/payment/:id", element: <Payment></Payment> },
     ],
   },
 ]);

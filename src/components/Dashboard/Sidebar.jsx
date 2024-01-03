@@ -45,7 +45,7 @@ export default function Sidebar() {
               </div>
 
               <div className=" xl:w-[90%]  w-[73%]  mx-auto ">
-                <NavLink className="px-5" to="/dashboard/todays-task">
+                <NavLink className="px-5" to="/dashboard/payment-history">
                   <i className=" md:ml-1 ml-[2px]  fa-brands fa-cc-amazon-pay mr-2 w-5"></i>
                   <span className="manu_item text-start lg:inline">
                     Payment History

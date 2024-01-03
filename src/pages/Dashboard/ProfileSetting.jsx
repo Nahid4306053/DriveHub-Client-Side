@@ -94,9 +94,9 @@ export default function ProfileSetting() {
           <Input value={forminfo.email} readOnly={true} type="email" placeholder="Email" label="Email (Not Editable)" ></Input>
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-lg">About Yourself Short</span>
+              <span className="label-text text-black text-lg">About Yourself Short</span>
             </label>
-            <textarea name="additionalInfo" readOnly={readmood} defaultValue={forminfo.additionalInfo} className="textarea textarea-bordered bg-transparent text-base placeholder:text-black text-black w-full " rows={5} placeholder="Bio" ></textarea>
+            <textarea name="additionalInfo" readOnly={readmood} defaultValue={forminfo.additionalInfo} className="textarea textarea-bordered bg-transparent text-base border-black placeholder:text-black text-black w-full " rows={5} placeholder="Bio" ></textarea>
           </div>
         </div>
        {!readmood && <div className="col-span-12 gap-4 flex justify-end">

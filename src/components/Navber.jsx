@@ -15,7 +15,7 @@ export default function Navber() {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/fetures">Fetures</NavLink>
+        <NavLink to="/cars">Our Cars</NavLink>
       </li>
       <li>
         <NavLink to="/prinching">Prinching</NavLink>
@@ -72,11 +72,9 @@ export default function Navber() {
             </div>
             {!CurrentUser?.displayName && (
               <li>
-                {" "}
                 <NavLink className="text-lg font-Nunito font-bold" to="/login">
-                  {" "}
-                  Log In{" "}
-                </NavLink>{" "}
+                  Log In
+                </NavLink>
               </li>
             )}
             {CurrentUser?.displayName && <UserAvatar />}

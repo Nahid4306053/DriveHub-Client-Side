@@ -55,28 +55,21 @@ export default function ManageBookings() {
                         <div className="flex flex-col  gap-2">
                           <div className="avatar">
                             <div className="mask mask-squircle w-10 h-10">
-                              <img
-                                src={ele.Renter?.photoURL}
-                                alt="Avatar"
-                              />
+                              <img src={ele.Renter?.photoURL} alt="Avatar" />
                             </div>
                           </div>
                           <div>
                             <div className="font-bold text-xs">{ele.Renter?.displayName.slice(0,10)}</div>
- 
                           </div>
                         </div>
                       </td>
                       <td>
                         <Link to={`/car-details/${ele._id}`}>
-                          <button
-                            data-tip="View Full Info"
-                            className="btn text-info tooltip btn-ghost btn-xs text-lg "
-                          >
+                          <button data-tip="View Full Info" className="btn text-info tooltip btn-ghost btn-xs text-lg " >
                             <i className="fa-solid fa-square-info"></i>
                           </button>
                         </Link>
-                        <ManageBookingsStatus id={ele._id}></ManageBookingsStatus>
+                        <ManageBookingsStatus id={ele._id}></ManageBookingsStatus> 
                       </td>
                     </TableRow>
                   );
@@ -86,9 +79,7 @@ export default function ManageBookings() {
                   <td colSpan={6} className="flex flex-col items-center my-10">
                     <h2 className="text-xl">No Data Found</h2>
                     <Link to="../../cars">
-                      <button className="btn-sm btn bg-red-600 hover:bg-red-600 text-white">
-                        View Cars
-                      </button>
+                      <button className="btn-sm btn bg-red-600 hover:bg-red-600 text-white"> View Cars </button>
                     </Link>
                   </td>
                 </tr>
@@ -96,12 +87,7 @@ export default function ManageBookings() {
             </tbody>
           )}
           {Bookings?.data?.totalData > 0 && (
-            <TableFoot
-              colSpan={7}
-              page={page}
-              setpage={setpage}
-              totalData={Bookings?.data?.totalData}
-            ></TableFoot>
+            <TableFoot colSpan={7} page={page} setpage={setpage} totalData={Bookings?.data?.totalData} ></TableFoot>
           )}
         </table>
       </div>

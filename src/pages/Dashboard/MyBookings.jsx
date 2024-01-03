@@ -1,6 +1,7 @@
+/* eslint-disable no-constant-condition */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import TableFoot from "../../components/shared/TableFoot";
 import SmallLoading from "../../components/shared/SmallLoading";
@@ -9,12 +10,26 @@ import useMyBookings from "../../Hooks/useMyBookings";
 import ChangeStatus from '../../components/Dashboard/ManageCar/ChangeStatus'
 import TableRow from "../../components/Dashboard/Bookings/TableRow";
 import CancelBooking from "../../components/Dashboard/Bookings/CancelBooking";
+import { toast } from "react-toastify";
 
 
 export default function MyBookings() {
   const [page, setpage] = useState(1);
   const { MyBookings, error, isError, isLoading, isSuccess } = useMyBookings(page,8);
-  
+
+  const navigate = useNavigate();
+  const handelpay = (status,id) =>{
+
+    if(status === "Confirmed"){
+      navigate(`/dashboard/payment/${id}`);
+    }
+    else if(status === "Pending"){
+      toast.warning("wait for Admin Confirmation")
+    }
+    else{
+      toast.error("Your Booking was Cancelled")
+    }
+  }
   return (
 
     <div className="Cars p-5">
@@ -51,14 +66,14 @@ export default function MyBookings() {
                     <TableRow key={ele._id} data={ele}>
                       <td>
                         <Link to={`/car-details/${ele._id}`}>
-                          <button
-                            data-tip="View Full Info"
-                            className="btn text-red-600 tooltip btn-ghost btn-xs text-lg "
-                          >
+                          <button data-tip="View Full Info" className="btn text-info tooltip btn-ghost btn-xs text-lg " >
                             <i className="fa-solid fa-square-info"></i>
                           </button>
                         </Link>
                        <CancelBooking id={ele._id}></CancelBooking>
+                          <button onClick={()=>handelpay(ele.status,ele._id)} data-tip="Pay Now" className="btn text-red-400  tooltip btn-ghost btn-xs text-lg " >
+                            <i className="fa-brands fa-amazon-pay "></i>
+                          </button>
                       </td>
                     </TableRow>
                   );
@@ -76,12 +91,7 @@ export default function MyBookings() {
             </tbody>
           )}
           {MyBookings?.data?.totalData > 0 && (
-            <TableFoot
-              colSpan={6}
-              page={page}
-              setpage={setpage}
-              totalData={MyBookings?.data?.totalData}
-            ></TableFoot>
+            <TableFoot colSpan={6} page={page} setpage={setpage} totalData={MyBookings?.data?.totalData} ></TableFoot>
           )}
         </table>
       </div>

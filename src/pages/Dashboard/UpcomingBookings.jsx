@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import TableFoot from "../../components/shared/TableFoot";
 import SmallLoading from "../../components/shared/SmallLoading";
@@ -9,12 +9,25 @@ import useUpcomingBook from "../../Hooks/useUpcomingBook";
 import ChangeStatus from '../../components/Dashboard/ManageCar/ChangeStatus'
 import TableRow from "../../components/Dashboard/Bookings/TableRow";
 import CancelBooking from "../../components/Dashboard/Bookings/CancelBooking";
+import { toast } from "react-toastify";
 
 
 export default function UpcomingBook() {
   const [page, setpage] = useState(1);
   const { UpcomingBook, error, isError, isLoading, isSuccess } = useUpcomingBook(page,8);
-  
+  const navigate = useNavigate()
+  const handelpay = (status,id) =>{
+    console.log(status);
+    if(status === "Confirmed"){
+      navigate(`/dashboard/payment/${id}`);
+    }
+    else if(status === "Pending"){
+      toast.warning("wait for Admin Confirmation")
+    }
+    else{
+      toast.error("Your Booking was Cancelled")
+    }
+  }
   return (
 
     <div className="Cars p-5">
@@ -59,6 +72,9 @@ export default function UpcomingBook() {
                           </button>
                         </Link>
                        <CancelBooking id={ele._id}></CancelBooking>
+                       <button onClick={()=>handelpay(ele.status,ele._id)} data-tip="Pay Now" className="btn text-red-400  tooltip btn-ghost btn-xs text-lg " >
+                            <i className="fa-brands fa-amazon-pay "></i>
+                          </button>
                       </td>
                     </TableRow>
                   );
