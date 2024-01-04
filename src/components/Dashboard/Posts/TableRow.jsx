@@ -14,7 +14,7 @@ export default function TableRow({ data, children }) {
       </td>
       <td>
         <div>
-          <div className="font-bold max-w-[150px]">{data?.title}</div>
+          <div className="font-bold max-w-[300px]">{data?.title}</div>
         </div>
       </td>
       <td>

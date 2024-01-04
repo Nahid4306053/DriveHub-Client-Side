@@ -3,19 +3,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import TableFoot from "../../components/shared/TableFoot";
-import TableRow from "../../components/shared/TableRow";
+import TableRow from "../../components/Dashboard/Posts/TableRow";
 import SmallLoading from "../../components/shared/SmallLoading";
 import SmallError from "../../components/shared/SmallError";
 import useMyPosts from "../../Hooks/useMyPosts";
-import ChangeStatus from '../../components/Dashboard/ManageCar/ChangeStatus'
-import { useMutation } from "@tanstack/react-query";
-import useAxiosSecureV1 from "../../Hooks/useAxiosSecureV1";
+import RemovePost from "../../components/Dashboard/Posts/RemovePost";
+
+
 export default function HandelMyPosts() {
   const [page, setpage] = useState(1);
   const { MyPosts, error, isError, isLoading, isSuccess } = useMyPosts(page,8);
  
   return (
-
     <div className="Posts p-5">
       <div className="text-center overflow-y-auto flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xl text-center bg-red-600 clipshape2 shadow-lg">
@@ -27,7 +26,7 @@ export default function HandelMyPosts() {
           <thead className="h-14  text-sm">
             <tr>
               <th>Banner</th>
-              <th>title</th>
+              <th>Title</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
@@ -47,15 +46,26 @@ export default function HandelMyPosts() {
                   return (
                     <TableRow key={ele._id} data={ele}>
                       <td>
-                        <Link to={`/post-details/${ele._id}`}>
+                        { ele.status === "Approved" 
+                        &&
+                        <Link to={`../../post-details/${ele._id}`}>
                           <button
                             data-tip="View Full Info"
-                            className="btn text-red-600 tooltip btn-ghost btn-xs text-lg "
+                            className="btn text-info tooltip btn-ghost btn-xs text-lg "
                           >
                             <i className="fa-solid fa-square-info"></i>
                           </button>
                         </Link>
-                       
+                        }
+                        <Link to={`/dashboard/edit-post/${ele._id}`}>
+                          <button
+                            data-tip="Edit The Post"
+                            className="btn  tooltip btn-ghost btn-xs text-lg "
+                          >
+                            <i className="fa-solid fa-pen-to-square"></i>
+                          </button>
+                        </Link>
+                        <RemovePost id={ele._id}></RemovePost>
                       </td>
                     </TableRow>
                   );

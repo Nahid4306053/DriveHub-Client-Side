@@ -25,6 +25,7 @@ import MyPaymentHistory from "../pages/Dashboard/MyPaymentHistory";
 import Cars from "../pages/Cars";
 import RatingForm from "../components/Dashboard/Rating/RatingForm";
 import HandelJourneyPost from "../pages/Dashboard/HandelJourneyPost";
+import HandelMyPosts from "../pages/Dashboard/HandelMyPosts";
 
 const CreateDRouter = createBrowserRouter([
   {
@@ -108,7 +109,7 @@ const CreateDRouter = createBrowserRouter([
       { path: "payment-history", element: <MyPaymentHistory></MyPaymentHistory> },
       { path: "/dashboard/payment/:id", element: <Payment></Payment> },
       { path: "/dashboard/review/:id", element: <RatingForm></RatingForm> },
-      { path: "/dashboard/add-post/", element: <HandelJourneyPost></HandelJourneyPost> },
+      { path: "my-posts", element: <HandelMyPosts></HandelMyPosts> },      { path: "/dashboard/add-post/", element: <HandelJourneyPost></HandelJourneyPost> },
     ],
   },
 ]);

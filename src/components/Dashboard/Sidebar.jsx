@@ -51,6 +51,14 @@ export default function Sidebar() {
                     Add Journey Post
                   </span>
                 </NavLink>
+              </div>    
+               <div className="xl:w-[90%]  w-[73%]  mx-auto ">
+                <NavLink className="px-5" to="/dashboard/my-posts">
+                  <i className=" md:ml-1 ml-[2px] fa-solid fa-signs-post mr-2 w-5"></i>
+                  <span className=" manu_item text-start lg:inline">
+                   Handel My Post
+                  </span>
+                </NavLink>
               </div>
 
               <div className=" xl:w-[90%]  w-[73%]  mx-auto ">

@@ -25,7 +25,7 @@ export default function HandelJourneyPost() {
        toast.success("Your Post Publish Successfully");
        formref.current.reset();
        SetImg('https://i.ibb.co/TvmQZ3G/placeholder.png');
-       navigate("/dashboard/profile");
+       navigate("/dashboard/my-posts");
     },
     onError :(err)=>{
       toast.error(err.message)
