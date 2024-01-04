@@ -12,7 +12,7 @@ export default function Input({label,type,placeholder,customcss , ...rest}) {
         {...rest}
           type={type}
           placeholder={placeholder}
-          className={` ${customcss} input text-black placeholder:text-black border-black input-bordered  bg-transparent`}
+          className={` ${customcss} input w-full text-black placeholder:text-black border-black input-bordered  bg-transparent`}
           required
         />
       </div>
