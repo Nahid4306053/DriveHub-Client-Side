@@ -14,11 +14,11 @@ export default function TableRow({ data, children }) {
       </td>
       <td>
         <div>
-          <div className="font-bold max-w-[300px]">{data?.title}</div>
+          <div className="font-bold max-w-[280px]">{data?.title}</div>
         </div>
       </td>
       <td>
-        <div className="badge badge-secondary">{data?.status}</div>
+        <div className={`badge text-white ${data?.status === "Approved" ? "badge-success" : "badge-secondary" } `}>{data?.status}</div>
       </td>
       {children}
     </tr>

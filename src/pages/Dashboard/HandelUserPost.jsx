@@ -6,13 +6,14 @@ import TableFoot from "../../components/shared/TableFoot";
 import TableRow from "../../components/Dashboard/Posts/TableRow";
 import SmallLoading from "../../components/shared/SmallLoading";
 import SmallError from "../../components/shared/SmallError";
-import useMyPosts from "../../Hooks/useMyPosts";
+import useUserPosts from "../../Hooks/useUserPosts";
 import RemovePost from "../../components/Dashboard/Posts/RemovePost";
+import ApprovedPost from "../../components/Dashboard/HandelUserPost/ApprovedPost";
 
 
 export default function HandelUserPost() {
   const [page, setpage] = useState(1);
-  const { MyPosts, error, isError, isLoading, isSuccess } = useMyPosts(page,8);
+  const { UserPosts, error, isError, isLoading, isSuccess } = useUserPosts(page,8);
  
   return (
     <div className="Posts p-5">
@@ -41,8 +42,8 @@ export default function HandelUserPost() {
             </div>
           ) : (
             <tbody>
-              {MyPosts.data.Posts.length > 0 &&
-                MyPosts.data.Posts.map((ele) => {
+              {UserPosts.data.Posts.length > 0 &&
+                UserPosts.data.Posts.map((ele) => {
                   return (
                     <TableRow key={ele._id} data={ele}>
                       <td>
@@ -57,14 +58,7 @@ export default function HandelUserPost() {
                           </button>
                         </Link>
                         }
-                        <Link to={`/dashboard/edit-post/${ele._id}`}>
-                          <button
-                            data-tip="Edit The Post"
-                            className="btn  tooltip btn-ghost btn-xs text-lg "
-                          >
-                            <i className="fa-solid fa-pen-to-square"></i>
-                          </button>
-                        </Link>
+                        <ApprovedPost id={ele._id}></ApprovedPost>
                         <RemovePost id={ele._id}></RemovePost>
                       </td>
                     </TableRow>
@@ -72,11 +66,11 @@ export default function HandelUserPost() {
                 })}
             </tbody>
           )}
-          {MyPosts?.data?.totalData > 0 && (
+          {UserPosts?.data?.totalData > 0 && (
             <TableFoot
               page={page}
               setpage={setpage}
-              totalData={MyPosts?.data?.totalData}
+              totalData={UserPosts?.data?.totalData}
             ></TableFoot>
           )}
         </table>

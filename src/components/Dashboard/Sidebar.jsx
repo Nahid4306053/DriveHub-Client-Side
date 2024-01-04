@@ -54,7 +54,7 @@ export default function Sidebar() {
               </div>    
                <div className="xl:w-[90%]  w-[73%]  mx-auto ">
                 <NavLink className="px-5" to="/dashboard/my-posts">
-                  <i className=" md:ml-1 ml-[2px] fa-solid fa-signs-post mr-2 w-5"></i>
+                  <i className=" md:ml-1 ml-[2px] fa-solid fa-folder-gear mr-2 w-5"></i>
                   <span className=" manu_item text-start lg:inline">
                    Handel My Post
                   </span>
@@ -97,6 +97,14 @@ export default function Sidebar() {
                   <i className=" md:ml-1 ml-[2px]  fa-solid fa-car-on mr-2 w-5"></i>
                   <span className=" manu_item text-start lg:inline">
                     Manage Bookings
+                  </span>
+                </NavLink>
+              </div> 
+              <div className=" xl:w-[90%]  w-[73%]  mx-auto ">
+                <NavLink className="px-5" to="/dashboard/handel-post">
+                  <i className=" md:ml-1 ml-[2px]  fa-solid fa-folder-gear mr-2 w-5"></i>
+                  <span className=" manu_item text-start lg:inline">
+                    Handel User Post
                   </span>
                 </NavLink>
               </div>
