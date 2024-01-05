@@ -9,12 +9,12 @@ export default function RiviewCard({data}) {
   const { Darkmood } = useMood()            
   return (
    <div className={`reviewcard flex items-center gap-4  bg-opacity-75 rounded-lg ${Darkmood ? "bg-base-300" : "bg-red-100"}   p-5`}>
-     <div className="w-24">
-        <img className='md:w-24 md:h-24  h-16 w-16 object-cover rounded-full ' src={reviewer?.photoURL} alt="" />
+     <div className="w-20">
+        <img className='md:w-16 mx-auto md:h-16  h-16 w-16 object-cover rounded-full ' src={reviewer?.photoURL} alt="" />
      </div> 
-     <div className="w-9/12 break-words ">
+     <div className=" break-words ">
       <h3 className='text-xl'>{reviewer?.displayName}</h3>
-      <div  className='text-lg text-yellow-500 '>
+      <div  className=' text-yellow-500 '>
       <Rating
         emptySymbol="far fa-star"
         fullSymbol="fas fa-star"
@@ -23,7 +23,7 @@ export default function RiviewCard({data}) {
         readonly
       />
       </div>
-       <p className='mt-3 opacity-75 leading-7'>{review}</p>
+       <p className='mt-1 opacity-75 leading-7'>{review}</p>
      </div>
    </div>
   )

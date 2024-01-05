@@ -1,0 +1,25 @@
+@import '../Variable.scss';
+
+
+.sub-title {
+    color: #ffffff;
+    background-color: #002347;
+    padding: 10px;
+    text-align: center;
+}
+
+.media-body {
+    p {
+        a {
+            @include transition(.5s);
+            color: $primery;
+            font-weight: 600;
+            font-size: 14px;
+
+        }
+
+        a:hover {
+            color: $secondray;
+        }
+    }
+}

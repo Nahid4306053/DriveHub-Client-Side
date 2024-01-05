@@ -5,6 +5,7 @@ import SmallLoading from "../components/shared/SmallLoading";
 import SmallError from "../components/shared/SmallError";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import Pagination from "../components/Filter/Pagination";
 
 export default function CommunityHub() {
   const [page,setpage] = useState(1);                  
@@ -41,6 +42,10 @@ export default function CommunityHub() {
               </div>
             </div> )
           })}
+            <div className=" flex justify-center mt-20 mx-auto">
+              <Pagination
+               page={page} setpage={setpage} totalData={ApprovePosts.data.totalData}></Pagination>
+            </div>
           </>)}   
     </div>
       

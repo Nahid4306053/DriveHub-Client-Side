@@ -7,6 +7,7 @@ import useAxios from "../../Hooks/useAxiosSecureV1";
 import Input from "../../components/Input";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Pagetitle from "../../Hooks/Pagetitle";
 
 
 export default function HandelJourneyPost() {
@@ -70,7 +71,7 @@ export default function HandelJourneyPost() {
   }
   return (
     <>
-  
+   <Pagetitle>Handel Posts || DriveHub</Pagetitle>
     <form ref={formref} onSubmit={handelData} className="p-10">
      <div className="bannerarea relative w-full rounded-lg overflow-hidden">
       <img src={uploadedImg} className="h-full obc w-full object-cover" 

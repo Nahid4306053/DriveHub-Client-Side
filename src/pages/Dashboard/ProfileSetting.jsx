@@ -8,6 +8,7 @@ import { useMutation } from "@tanstack/react-query";
 import useAxios from "../../Hooks/useAxiosSecureV1";
 import uploadIMGBB from '../../Utils/UploadIMG'
 import { toast } from "react-toastify";
+import Pagetitle from "../../Hooks/Pagetitle";
 export default function ProfileSetting() {
   const [readmood, setReadmood] = useState(true);
   const { CurrentUser } = useAuth();
@@ -80,6 +81,7 @@ export default function ProfileSetting() {
            <div className="flex justify-center"> {readmood ? (
             <div onClick={() => setReadmood(false)} className="btn mt-12   bg-red-600 hover:bg-red-600   text-white" >
               Update Profile
+              <Pagetitle> Profile Settings || DriveHub</Pagetitle>
             </div>
                ) : (
             <div className="btn mt-12 relative   bg-red-600 hover:bg-red-600   text-white">

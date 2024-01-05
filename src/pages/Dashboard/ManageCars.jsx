@@ -10,6 +10,7 @@ import useCarsData from "../../Hooks/useCarsdata";
 import ChangeStatus from '../../components/Dashboard/ManageCar/ChangeStatus'
 import { useMutation } from "@tanstack/react-query";
 import useAxiosSecureV1 from "../../Hooks/useAxiosSecureV1";
+import Pagetitle from "../../Hooks/Pagetitle";
 export default function ManageCars() {
   const [page, setpage] = useState(1);
   const { CarsData, error, isError, isLoading, isSuccess } = useCarsData(page,8);
@@ -20,6 +21,7 @@ export default function ManageCars() {
       <div className="text-center overflow-y-auto flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xl text-center bg-red-600 clipshape2 shadow-lg">
           Manage Cars
+          <Pagetitle> Manage Cars || DriveHub</Pagetitle>
         </h1>
       </div>
       <div className="overflow-x-auto custom-scrollbar table-pin-rows lg:h-[550px] mt-12  bg- md:h-[600px] h-[400px]">

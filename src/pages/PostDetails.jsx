@@ -9,6 +9,8 @@ import useAxiosSecureV1 from "../Hooks/useAxiosSecureV1";
 import { useEffect } from "react";
 import Comment_form from "../components/PostDetails/Comment_form";
 import CommentList from "../components/PostDetails/CommentList";
+import Pagetitle from "../Hooks/Pagetitle";
+import ScrollTop from "../Hooks/ScrollTop";
 export default function PostDetails() {
   const { id } = useParams();
   const Axios = useAxiosSecureV1()
@@ -16,6 +18,7 @@ export default function PostDetails() {
   useEffect(() => {
     Axios.put(`/post/views/${id}`);
   }, []);
+  ScrollTop()
   return (
     <div>
       {isLoading ? (
@@ -28,6 +31,7 @@ export default function PostDetails() {
         </div>
       ) : (
         <div>
+          <Pagetitle> {Post.data.title} || DriveHub</Pagetitle>
           <div className="post-details">
             <h1 className="text-3xl pb-10 font-semibold title">
               {Post.data.title}

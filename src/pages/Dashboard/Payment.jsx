@@ -6,6 +6,7 @@ import SmallError from "../../components/shared/SmallError";
 import SmallLoading from "../../components/shared/SmallLoading";
 import { Divider } from "@mui/material";
 import PaymentCardForm  from '../../components/Payment/PaymentCardForm'
+import Pagetitle from "../../Hooks/Pagetitle";
 // import { Divider } from '@mui/material'
 // import { toast } from 'react-toastify'
 
@@ -21,7 +22,8 @@ export default function Payment() {
     <div className="p-5">
       <div className="flex items-center flex-col justify-center">
         <h1 className="p-5 text-white px-10 text-2xl text-center  bg-red-600  clipshape2 shadow-lg">
-          Payment
+          
+          <Pagetitle>Payment || DriveHub</Pagetitle>
         </h1>
         <div className="mt-10">
           {isLoading ? (

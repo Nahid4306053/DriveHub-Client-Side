@@ -12,6 +12,7 @@ import WhyChooseUs from "../components/Home/WhyChooseUs";
 import Blogs from '../components/Home/Blogs'
 import PageBanner from "../components/shared/PageBanner";
 import SectionTitle from "../components/shared/SectionTitle";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -25,7 +26,10 @@ export default function Home() {
           <div className="text-center md:pt-40 space-y-6">
           <h1 className="md:text-5xl pt-5 text-3xl  text-white font-bold ita">Discover the Journey</h1>
           <h3 className="md:text-3xl text-xl text-white italic">Rent Your Dream Car Today - Seamless, Reliable, Unforgettable</h3>
-          <div className=""><button style={{clipPath:"polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)"}} className="md:mt-8 md:btn-lg bg-red-600 hover:bg-red-600 btn border-none pb-2 text-white rounded-none">Explore cars</button>
+          <div className="">
+            <Link to={"/cars"}>
+            <button style={{clipPath:"polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)"}} className="md:mt-8 md:btn-lg bg-red-600 hover:bg-red-600 btn border-none pb-2 text-white rounded-none">Explore cars</button>
+            </Link>
           <br />
           <i className="fa-solid fa-fade text-3xl mt-10 text-white fa-chevrons-down"></i>
           </div>

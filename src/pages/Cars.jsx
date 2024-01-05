@@ -13,8 +13,11 @@ import SmallLoading from "../components/shared/SmallLoading";
 import SmallError from "../components/shared/SmallError";
 import CarDetailsCard from "../components/shared/CarDetailsCard";
 import Pagination from "../components/Filter/Pagination";
+import Pagetitle from "../Hooks/Pagetitle";
+import ScrollTop from "../Hooks/ScrollTop";
 
 export default function Cars() {
+  ScrollTop()
   const {search} = useLocation()                  
   const [searchParams,setSearchParams] = useSearchParams();      
   const [page,setpage] = useState(1);
@@ -27,6 +30,7 @@ export default function Cars() {
   return (
                     
     <div>
+      <Pagetitle> Our Car Collections || DriveHub</Pagetitle>
       <PageBanner
         polygon={
           "polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)"

@@ -209,7 +209,7 @@ export default function Signup() {
 
               <p className="mt-7 text-center">
                 Already have an Account?
-                <Link className="text-yellow-400  font-bold" to="/login">
+                <Link className="text-blue-950 ml-2  font-bold" to="/login">
                   Log In
                 </Link>
               </p>

@@ -85,33 +85,19 @@ const CreateDRouter = createBrowserRouter([
   {
     path: "/signup",
     element: (
-      <AuthnicationContext>
-        <AuthHandler>
-          <Signup></Signup>
-        </AuthHandler>
-      </AuthnicationContext>
+      <AuthnicationContext> <AuthHandler> <Signup></Signup> </AuthHandler> </AuthnicationContext>
     ),
   },
   {
     path: "/login",
     element: (
-      <AuthnicationContext>
-        <AuthHandler>
-          <Login></Login>
-        </AuthHandler>
-      </AuthnicationContext>
+      <AuthnicationContext> <AuthHandler> <Login></Login> </AuthHandler> </AuthnicationContext>
     ),
   },
   {
     path: "/dashboard",
     element: (
-      <AuthnicationContext>
-        <TemplateMoodContext>
-          <PrivateRouter>
-            <DashBoardLayout />
-          </PrivateRouter>
-        </TemplateMoodContext>
-      </AuthnicationContext>
+      <AuthnicationContext> <TemplateMoodContext> <PrivateRouter> <DashBoardLayout/> </PrivateRouter> </TemplateMoodContext> </AuthnicationContext>
     ),
     errorElement: <Notfound></Notfound>,
     children: [

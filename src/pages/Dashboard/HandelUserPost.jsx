@@ -9,6 +9,7 @@ import SmallError from "../../components/shared/SmallError";
 import useUserPosts from "../../Hooks/useUserPosts";
 import RemovePost from "../../components/Dashboard/Posts/RemovePost";
 import ApprovedPost from "../../components/Dashboard/HandelUserPost/ApprovedPost";
+import Pagetitle from "../../Hooks/Pagetitle";
 
 
 export default function HandelUserPost() {
@@ -20,6 +21,7 @@ export default function HandelUserPost() {
       <div className="text-center overflow-y-auto flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xl text-center bg-red-600 clipshape2 shadow-lg">
           Manage Posts
+          <Pagetitle> Manage Posts || DriveHub</Pagetitle>
         </h1>
       </div>
       <div className="overflow-x-auto custom-scrollbar table-pin-rows lg:h-[550px] mt-12  bg- md:h-[600px] h-[400px]">

@@ -6,11 +6,12 @@ import useAxiosSecureV1 from "../../Hooks/useAxiosSecureV1";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Swal from "sweetalert2";
 import { useAuth } from "../../Context/AuthnicationContext";
+import { useNavigate } from "react-router-dom";
 export default function BookingCar({ data }) {
   const AxiosSecureV1 = useAxiosSecureV1();
   const ClientQuery = useQueryClient();
   const {CurrentUser} = useAuth();
-  
+  const navigate = useNavigate()
   const mutation = useMutation({
     mutationFn: async (formdata) => {
       const res = await AxiosSecureV1.post("/car/book", formdata);
@@ -30,6 +31,7 @@ export default function BookingCar({ data }) {
     });
 
   const handelInfo = (form) => {
+    if(CurrentUser){
     form.preventDefault();
     const err = [];
     const Formdata = {};
@@ -70,6 +72,10 @@ export default function BookingCar({ data }) {
       Formdata.carData = data._id;
       mutation.mutate(Formdata)
     }
+  }
+  else{
+    navigate("/login")
+  }
   };
   return (
     <form onSubmit={handelInfo} className="mt-8 space-y-4">

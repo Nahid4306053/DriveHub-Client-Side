@@ -8,6 +8,7 @@ import SmallLoading from "../../components/shared/SmallLoading";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import TableFoot from "../../components/shared/TableFoot";
+import Pagetitle from "../../Hooks/Pagetitle";
 
 export default function MyPaymentHistory() {
   const [page, setpage] = useState(1);
@@ -19,6 +20,7 @@ export default function MyPaymentHistory() {
       <div className="text-center overflow-y-auto flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xl text-center  bg-red-600   clipshape2 shadow-lg">
           My Payment History
+          <Pagetitle>Payment History || DriveHub</Pagetitle>
         </h1>
       </div>
       <div className="overflow-x-auto custom-scrollbar table-pin-rows lg:h-[550px] mt-12  bg- md:h-[600px] h-[400px]">

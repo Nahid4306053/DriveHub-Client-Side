@@ -1,25 +1,25 @@
 /* eslint-disable no-unused-vars */
 
-import "../scss/Popularpost.scss";
-import usePopularBlog from "../Hooks/usePopularBlog";
+
+import usePopularPost from "../../Hooks/usePopularPost";
 import PopularpostCard from "./PopularpostCard";
-import ErrorComponent from "./Shared/ErrrorComponet";
-import LoadingComponet from "./Shared/LoadingComponent";
+import SmallLoading from "../shared/SmallLoading";
+import SmallError from "../shared/SmallError";
 export default function PopularPost() {
-const {PopularBlog,error,isError,isLoading,isSuccess} = usePopularBlog();
+const {PopularPost,error,isError,isLoading,isSuccess} = usePopularPost();
 
   return (
     <>
-      <div className=" bg-[#eff6fb]  pt-10 w-full  feed-back mt-5">
+      <div className=" bg-[#eff6fb]   w-full  feed-back mt-5">
         {/* <!-- this is  header --> */}
-        <h4 className="sub-title w-full">Popular Posts</h4>
+        <h4 className="sub-title w-full border-l-4 border-red-600 bg-black text-white px-5 py-3 text-xl font-bold ">Popular Posts</h4>
         {/* <!-- this is line --> */}
         {isLoading ? (
-          <LoadingComponet></LoadingComponet>
+          <SmallLoading></SmallLoading>
         ) : isError ? (
-          <ErrorComponent></ErrorComponent>
+          <SmallError></SmallError>
         ) : (
-          PopularBlog.data.Blogs.map((ele) => {
+          PopularPost.data.Posts.map((ele) => {
             return <PopularpostCard data={ele} key={ele._id} />;
           })
         )}

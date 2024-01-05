@@ -30,7 +30,7 @@ export default function DragAndDropImg({
         <input {...getInputProps()} />
         <p className="border-dotted border-4  border-red-900 rounded-lg py-10 text-center px-5">
           Drag 'n' drop Car Gallery Images, or click to select [minimam 3 and
-          maximam 5 img]
+          maximam 15 img]
         </p>
       </div>
       <aside>

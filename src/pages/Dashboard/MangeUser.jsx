@@ -5,6 +5,7 @@ import TableRow from "../../components/Dashboard/ManageUser/TableRow";
 import SmallError from "../../components/shared/SmallError";
 import SmallLoading from "../../components/shared/SmallLoading";
 import TableFoot from "../../components/shared/TableFoot";
+import Pagetitle from "../../Hooks/Pagetitle";
 
 export default function MangeUser() {
   const [page, setpage] = useState(1);
@@ -18,6 +19,7 @@ export default function MangeUser() {
       <div className="text-center overflow-y-auto flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xl text-center  bg-red-600  clipshape2 shadow-lg">
           Manage User
+          <Pagetitle> Manage Users || DriveHub</Pagetitle>
         </h1>
       </div>
       <div className="overflow-x-auto custom-scrollbar table-pin-rows lg:h-[550px] mt-12  bg- md:h-[600px] h-[400px]">

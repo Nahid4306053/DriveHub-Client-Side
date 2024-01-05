@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useAxiosSecureV1 from '../../../Hooks/useAxiosSecureV1';
 import { useMood } from '../../../Context/TemplateMoodContext';
+import Pagetitle from '../../../Hooks/Pagetitle';
 export default function RatingForm(){
   const {id} = useParams()  
   const navigate = useNavigate();
@@ -64,6 +65,7 @@ export default function RatingForm(){
        <div className="text-center overflow-y-auto  my-14 flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xltext-center text-xl bg-red-600   clipshape2 shadow-lg">
           Review
+          <Pagetitle>Review || DriveHub</Pagetitle>
         </h1>
       </div>
       <form ref={formref} onSubmit={handelReviewData} className={`mt-5 ${Darkmood ? "bg-base-300" : ""}  bg-opacity-70 p-7`}>

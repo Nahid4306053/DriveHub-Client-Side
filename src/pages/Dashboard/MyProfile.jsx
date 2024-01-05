@@ -3,6 +3,8 @@ import PaymentAnimation from "../../assets/Payment.json"
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../Context/AuthnicationContext'
 import Lottie from "lottie-react"
+import Pagetitle from "../../Hooks/Pagetitle"
+import Statitics from "../../components/Profile/Statitics"
 
 
 
@@ -12,6 +14,7 @@ export default function MyProfile() {
   return (
     <div className=''>
      <div className="">
+     <Pagetitle> Profile || DriveHub</Pagetitle>
       <div style={{background:"url(https://i.ibb.co/Nj9T8Cw/10001.png)",backgroundPosition:"center" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover" }}  className="md:h-48  h-28">
           <img className=' translate-y-1/2 h-full w-28 md:w-48 mx-auto object-cover bg-white p-1  rounded-full' src={CurrentUser.photoURL} alt="" />
         </div>
@@ -19,6 +22,7 @@ export default function MyProfile() {
            <h3 className='name text-2xl font-bold'>{CurrentUser.displayName}</h3> 
            <h4>{CurrentUser.email}</h4>         
         </div>  
+        {role === "user" &&
          <div className="additionalInfo   flex items-center lg:flex-row flex-col  gap-10">
              
            <div className='flex-1'>
@@ -29,7 +33,12 @@ export default function MyProfile() {
               <h1>Hellow {CurrentUser.displayName} ,  Welocome Back,  <br />  Complete Your Upcoming Booking Payment</h1>
               <Link to="/dashboard/upcoming-bookings"><button className='btn bg-red-300 border-none hover:bg-red-300 mt-7 text-white'>Upcoming Bookings</button></Link>
               </div>       
-         </div>                        
+         </div>}   
+
+         {role === "admin" && 
+         <Statitics>
+         </Statitics>
+         }                
       </div>                 
     </div>
   )

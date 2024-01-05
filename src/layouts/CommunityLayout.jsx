@@ -1,9 +1,12 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Pagetitle from "../Hooks/Pagetitle";
 import PageBanner from "../components/shared/PageBanner";
+import PopularPost from "../components/PostDetails/PopularPost";
+import ScrollTop from "../Hooks/ScrollTop";
 
 
 export default function CommunityLayout() {
+  ScrollTop()
   return (
     <div>
        <Pagetitle>Community Hub || DriveHub</Pagetitle>
@@ -27,8 +30,11 @@ export default function CommunityLayout() {
       <div className="xl:col-span-2 col-span-full xl:mr-14 ">
         <Outlet></Outlet>
       </div>      
-      <div className="xl:col-span-1 col-span-full bg-black p-5">
-
+      <div className="xl:col-span-1 col-span-full ">
+       <PopularPost></PopularPost>
+       <div className="mt-14">
+        <Link to={"/cars"}><img src="https://i.ibb.co/hVLxxb9/add.png" alt="" /></Link>
+       </div>
       </div>
       </div>
     </div>              

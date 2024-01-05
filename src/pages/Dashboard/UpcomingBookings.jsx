@@ -10,6 +10,7 @@ import ChangeStatus from '../../components/Dashboard/ManageCar/ChangeStatus'
 import TableRow from "../../components/Dashboard/Bookings/TableRow";
 import CancelBooking from "../../components/Dashboard/Bookings/CancelBooking";
 import { toast } from "react-toastify";
+import Pagetitle from "../../Hooks/Pagetitle";
 
 
 export default function UpcomingBook() {
@@ -33,7 +34,8 @@ export default function UpcomingBook() {
     <div className="Cars p-5">
       <div className="text-center overflow-y-auto flex justify-center text-white">
         <h1 className="p-5 px-10 text-2xl text-center bg-red-600 clipshape2 shadow-lg">
-         My Bookings
+         Upcoming Bookings
+         <Pagetitle> Upcoming Bookings || DriveHub</Pagetitle>
         </h1>
       </div>
       <div className="overflow-x-auto custom-scrollbar table-pin-rows lg:h-[550px] mt-12  bg- md:h-[600px] h-[400px]">

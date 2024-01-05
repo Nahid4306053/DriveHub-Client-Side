@@ -17,10 +17,10 @@ export default function EntrypointDesc() {
       <div className="relative p-10 z-10 flex items-end h-full  text-title">
         <div className="space-y-10">
           <h1 className="text-3xl">
-          TaskOver - Elevate Your Productivity with Seamless Task Managemen
+          DriveHub - Chronicles: Crafting Your Epic Journey
           </h1>
           <p className="leading-8 text-lg">
-          Experience the next level of productivity with TaskOver, your go-to task management solution. Streamline your workflow, collaborate effortlessly, and achieve more with our intuitive platform. Say goodbye to chaos and hello to efficiency - TaskOver makes managing tasks a breeze!
+          Experience the extraordinary at DriveHub, where your dreams take the driver's seat. "You Journey Your Way" is not just a tagline; it's our promise to elevate your travel escapades. Unleash the extraordinary with DriveHub—your gateway to unparalleled car rental experiences. Your dream car awaits, and every journey is a canvas for your unique story. Welcome to DriveHub, where adventure knows no bounds.
           </p>
         </div>
       </div>
