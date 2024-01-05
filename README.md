@@ -1,45 +1,45 @@
-# DriveHub - A Task Management Website
+# DriveHub - Car Rental and Community Platform
 
-## Overview
+## Project Overview
 
-DriveHub is a comprehensive task management website designed to streamline and enhance your productivity. In a world filled with myriad responsibilities, DriveHub empowers users to effortlessly create, organize, and prioritize tasks, ensuring that no detail is overlooked.
+DriveHub is a comprehensive car rental website that facilitates users in renting cars, making online payments, sharing their car journey experiences, and engaging with a community of like-minded individuals. The platform also provides administrative tools for managing bookings, user roles, and community content.
+
 
 ## Live Website Preview
 
-[![Project Screenshot](https://github.com/Nahid4306053/drivehub-client/blob/main/public/full_web_preview.jpg)](https://doDriveHub.netlify.app/)
+[![Project Screenshot](https://github.com/Nahid4306053/DriveHub-Client-Side/blob/0195ca3f948cd4eccc70aad9c3fcf388ae8d3204/public/images/full_web_priview.jpg)](https://drivehubv1.netlify.app)
 
-[Click to View Live Website](https://doDriveHub.netlify.app/)
+[Click to View Live Website](https://drivehubv1.netlify.app)
 
-## KeyFetures
 
-1. **Intuitive Task Creation:** DriveHub simplifies the task creation process, allowing users to quickly input task details such as title, description, due date, and priority level. The user-friendly interface ensures a seamless experience for users of all backgrounds.
+### Features
 
-2. **Organizational Flexibility:** Whether you prefer a simple to-do list or a more detailed project structure, DriveHub adapts to your organizational style. Categorize tasks into projects, assign tags, and create custom lists to suit your workflow.
+1. **Car Rental System**
+   - Users can browse and filter cars by brand, model, status, and price.
+   - Online payment system for rental transactions on a per-day basis.
+   - User authentication is required for renting cars.
 
-3. **Priority Management:** Stay on top of your tasks by assigning priority levels. DriveHub helps you identify critical tasks that require immediate attention, ensuring that you can focus on what matters most.
+2. **Community Hub**
+   - Users can share their car journey experiences as posts.
+   - Users can view and comment on posts, see who commented, and track post views.
+   - Post authors are visible to other users.
+   - A popular post section highlights trending community content.
 
-4. **Deadline Tracking:** Never miss a deadline again with DriveHub's built-in deadline tracking feature. Receive timely reminders and notifications, helping you stay organized and meet project milestones.
+3. **Review System**
+   - After a rental period, users can provide reviews for the rented cars.
 
-5. **User-Friendly Interface:** DriveHub is designed with user experience in mind. The clean and intuitive interface ensures that users can navigate the platform effortlessly, focusing on their tasks rather than the tool itself.
+4. **User Profiles**
+   - Users can update their profiles, providing a personalized touch to their accounts.
 
-6. **Cross-Platform Accessibility:** Access your tasks anytime, anywhere. DriveHub is accessible on various devices, including desktops, laptops, tablets, and smartphones, ensuring that you can manage your tasks on the go.
+5. **Admin Panel**
+   - Admins have control over booking statuses and can confirm or cancel reservations.
+   - User roles and permissions can be managed by administrators.
+   - Community content moderation tools for handling posts.
 
-7. **Task Search Functionality:** DriveHub incorporates a robust search functionality, allowing users to quickly locate specific tasks amidst their growing to-do lists. The search feature employs intelligent filters, enabling users to find tasks based on keywords, tags, due dates, or other relevant criteria, ensuring a swift and efficient task retrieval process.
+## Technology
 
-8. **Drag and Drop Task Management:** Enhance your user experience with the intuitive drag-and-drop feature. Effortlessly rearrange tasks, change their priority, or move them between projects using a simple drag-and-drop motion. DriveHub empowers users with a visual and interactive approach to task management, promoting a fluid and dynamic workflow.
-
-9. **Status Line for Tasks:** DriveHub introduces a visually intuitive status line for each task, providing a clear representation of its progress. Easily transition tasks from 'To-Do' to 'Ongoing' and finally to 'Completed' by dragging them along the status line. This visual representation enhances transparency and allows users to track the lifecycle of tasks at a glance.
-
-10. **Real-Time Updates:** Stay informed about task changes in real-time. DriveHub sends notifications and updates whenever there's a modification in task status, ensuring that all team members are on the same page and aware of the latest developments.
-
-11. **Customizable Workflow:** Tailor DriveHub to fit your unique workflow by customizing the status options and their corresponding visual representations on the status line. This flexibility ensures that the platform adapts seamlessly to diverse project requirements and methodologies.
-
-DriveHub is more than just a task management tool; it's a dynamic platform that adapts to your unique needs, providing the tools necessary to achieve your goals efficiently. Experience a new level of organization and productivity with DriveHub - where tasks meet simplicity and effectiveness.
-
-## Technologies Used
-
-- **Frontend:** React.js, HTML, CSS, SCSS, Tailwind
-- **Backend:** Node.js, Express, MongoDB , Mongoose
-- **Authentication:** Firebase Authentication
-- **Client Hosting:** Netlify
-- **Server Hosting:** Vercel
+- **Frontend**: HTML, CSS, SCSS, Tailwind CSS, JavaScript, React JS, MUI
+- **Backend**: Node.js, Express.js, MongoDB, Mongoose 
+- **Database**: MongoDB
+- **Payment Integration**: Stripe API
+- **Authentication**: JWT (JSON Web Tokens), Firebase
