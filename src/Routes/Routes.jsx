@@ -27,6 +27,9 @@ import RatingForm from "../components/Dashboard/Rating/RatingForm";
 import HandelJourneyPost from "../pages/Dashboard/HandelJourneyPost";
 import HandelMyPosts from "../pages/Dashboard/HandelMyPosts";
 import HandelUserPost from "../pages/Dashboard/HandelUserPost";
+import CommunityHub from "../pages/CommunityHub";
+import CommunityLayout from "../layouts/CommunityLayout";
+import PostDetails from "../pages/PostDetails";
 
 const CreateDRouter = createBrowserRouter([
   {
@@ -51,6 +54,19 @@ const CreateDRouter = createBrowserRouter([
       {
         path: "/cars",
         element: <Cars />,
+      },     
+       {
+        path: "/community",
+        element: <CommunityLayout />,
+        children : [
+          {
+            path : "/community/",
+            element : <CommunityHub/>
+          },{
+            path : "/community/post-details/:id",
+            element : <PostDetails/>
+          },
+        ]
       },
       {
         path: "/contact",

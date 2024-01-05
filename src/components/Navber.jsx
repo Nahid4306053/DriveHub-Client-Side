@@ -16,6 +16,9 @@ export default function Navber() {
       </li>
       <li>
         <NavLink to="/cars">Our Cars</NavLink>
+      </li>      
+      <li>
+        <NavLink to="/community">Community Hub</NavLink>
       </li>
 
       <li>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Pagetitle from "../Hooks/Pagetitle";
 import ScrollTop from "../Hooks/ScrollTop";
 

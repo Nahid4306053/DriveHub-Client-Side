@@ -2,19 +2,19 @@ import { useQuery } from '@tanstack/react-query';
 
 import useAxiosPublicV1 from './useAxiosPublicV1';
 
-export default function useUserPosts(page,limit) {
+export default function useApprovePosts(page,limit) {
   const Tpage = page || 1 ;                  
   const Tlimit = limit || 10 ;                  
   const axios = useAxiosPublicV1();
-    const fetchUserPosts = async () => {
-     const res = await axios.get(`/post/all?page=${Tpage}&limit=${Tlimit}`);
+    const fetchApprovePosts = async () => {
+     const res = await axios.get(`/post/approved?page=${Tpage}&limit=${Tlimit}`);
       return res;
      };
-    const { data: UserPosts, isLoading, isError, error,isSuccess } = useQuery({
-       queryKey: ["UserPosts", page,limit],
-       queryFn: () => fetchUserPosts(),
+    const { data: ApprovePosts, isLoading, isError, error,isSuccess } = useQuery({
+       queryKey: ["ApprovePosts", page,limit],
+       queryFn: () => fetchApprovePosts(),
      });  
 
-  return {UserPosts, isLoading, isError, error , isSuccess}
+  return {ApprovePosts, isLoading, isError, error , isSuccess}
   
 }

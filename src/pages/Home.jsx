@@ -20,10 +20,10 @@ export default function Home() {
   return (
     <>
       <Pagetitle>Home || DriveHub</Pagetitle>
-      <PageBanner polygon={"polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)"} bgimg={"https://i.ibb.co/x7575j4/ks-rental.jpg"}>
-        <div className="content min-h-[400px] flex items-center">
-          <div className="text-center space-y-6">
-          <h1 className="md:text-5xl text-3xl  text-white font-bold ita">Discover the Journey</h1>
+      <PageBanner polygon={"polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)"} bgimg={"https://i.ibb.co/z79jN4C/car-banner.png"}>
+        <div className="content md:min-h-[400px]  flex items-end">
+          <div className="text-center md:pt-40 space-y-6">
+          <h1 className="md:text-5xl pt-5 text-3xl  text-white font-bold ita">Discover the Journey</h1>
           <h3 className="md:text-3xl text-xl text-white italic">Rent Your Dream Car Today - Seamless, Reliable, Unforgettable</h3>
           <div className=""><button style={{clipPath:"polygon(100% 0, 100% 70%, 90% 85%, 80% 80%, 50% 100%, 21% 80%, 10% 85%, 0 69%, 0 0)"}} className="md:mt-8 md:btn-lg bg-red-600 hover:bg-red-600 btn border-none pb-2 text-white rounded-none">Explore cars</button>
           <br />
