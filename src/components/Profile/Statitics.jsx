@@ -1,3 +1,4 @@
+
 /* eslint-disable no-unused-vars */
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecureV1 from "../../Hooks/useAxiosSecureV1"
@@ -13,7 +14,7 @@ export default function Statitics() {
         return res
      }
   });
-  console.log(statistic);
+  
   return (
     <div className="p-14">
               {isLoading ? (
@@ -27,29 +28,29 @@ export default function Statitics() {
           ) : ( 
            <>         
           <div className="user grid grid-cols-1 mt-5 md:grid-cols-2 gap-14">
-            <StatisticCard title={"Total User"}> 
+            <StatisticCard icon={<i className="fa-solid fa-user"></i>} title={"Total User"}> 
             <p className="text-xl">{statistic.data.totaluser > 9 ?statistic.data.totaluser : "0"+statistic.data.totaluser}</p></StatisticCard>             
-            <StatisticCard title={"Total Revinue"}> <p className="text-xl">${statistic.data.totalRevenue}</p></StatisticCard>  
+            <StatisticCard icon={<i className="fa-regular fa-chart-line-up"></i>} title={"Total Revinue"}> <p className="text-xl">${statistic.data.totalRevenue}</p></StatisticCard>  
           </div>          
           <div className="user grid grid-cols-1 mt-14  md:grid-cols-2 lg:grid-cols-3 gap-14">
              <div className="col-span-3 text-3xl font-bold"> Car Status: </div>       
-            <StatisticCard title={"Available"}> 
+            <StatisticCard icon={<i className="fa-solid fa-car"></i>} title={"Available"}> 
             <p className="text-xl">{statistic.data.cars.Available > 9 ?statistic.data.cars.Available : "0"+statistic.data.cars.Available}</p></StatisticCard>              
-            <StatisticCard title={"Booked"}> 
+            <StatisticCard icon={<i className="fa-solid fa-cart-circle-check"></i>}  title={"Booked"}> 
             <p className="text-xl">{statistic.data.cars.Booked > 9 ?statistic.data.cars.Booked : "0"+statistic.data.cars.Booked}</p></StatisticCard>              
-            <StatisticCard title={"Maintenance"}> 
+            <StatisticCard icon={<i className="fa-solid fa-car-burst"></i>} title={"Maintenance"}> 
             <p className="text-xl">{statistic.data.cars.Maintenance > 9 ? statistic.data.cars.Maintenance : "0"+statistic.data.cars.Maintenance}</p></StatisticCard>             
   
           </div>         
            <div className="user grid grid-cols-1 mt-14  md:grid-cols-2 lg:grid-cols-3 gap-14">
              <div className="col-span-3 text-3xl font-bold"> Booking Status: </div>       
-            <StatisticCard title={"Pending"}> 
+            <StatisticCard icon={<i className="fa-solid fa-spinner-scale"></i>} title={"Pending"}> 
             <p className="text-xl">{statistic.data.totalBookings.Pending > 9 ?statistic.data.totalBookings.Pending : "0"+statistic.data.totalBookings.Pending}</p></StatisticCard>             
-             <StatisticCard title={"Cancelled"}> 
+             <StatisticCard icon={<i className="fa-solid fa-ban"></i>} title={"Cancelled"}> 
             <p className="text-xl">{statistic.data.totalBookings.Cancelled > 9 ?statistic.data.totalBookings.Cancelled : "0"+statistic.data.totalBookings.Cancelled}</p></StatisticCard>              
-            <StatisticCard title={"Confirmed"}> 
+            <StatisticCard icon={<i className="fa-solid fa-badge-check"></i>} title={"Confirmed"}> 
             <p className="text-xl">{statistic.data.totalBookings.Confirmed > 9 ?statistic.data.totalBookings.Confirmed : "0"+statistic.data.totalBookings.Confirmed}</p></StatisticCard>              
-            <StatisticCard title={"Complited"}> 
+            <StatisticCard icon={<i className="fa-regular fa-money-check-dollar-pen"></i>}  title={"Complited"}> 
             <p className="text-xl">{statistic.data.totalBookings.Complited > 9 ?statistic.data.totalBookings.Complited : "0"+statistic.data.totalBookings.Complited}</p></StatisticCard>              
            
   
